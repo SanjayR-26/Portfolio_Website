@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+
+    <link rel="stylesheet" href="index.css" />
+    <title>Sanjay-Portfolio</title>
+  </head>
+  <body>
+    <div class="nav-container">
+      <div class="topnav">
+        <h1 class="logo">SANJAY</h1>
+        <ul class="menu" style="list-style: none;">
+          <li><a class="menuItem" href="#">HOME</a></li>
+          <li><a class="menuItem" href="#">ABOUT</a></li>
+          <li><a class="menuItem" href="#">WORKS</a></li>
+          <li><a class="menuItem" href="#">CONTACT</a></li>
+        </ul>
+        <a class="hamburger">
+          <span class="menuIcon material-symbols-outlined"> sort </span>
+          <span class="closeIcon material-symbols-outlined"> close </span>
+        </a>
+      </div>
+    </div>
+    
+    <section class="intro">
+        <div class="one">
+            <div class="nameIntro">
+                <h2>HEY! I'M SANJAY</h2>
+                <h1>COMPUTER VISION</h1>
+            </div>
+            <div class="onePara">
+                <p>" I've been learning computer vision and AI technologies for the past 3 years and my interest is only increasing while learning and practicing such futuristic technologies "
+                </p>
+            </div>
+        </div>
+        <div class="two">
+            <div class="twoPara">
+                <p>" I had worked in many computer vision and machine learning projects end-to-end knowing the complete workflow of designing and developing machine learning and computer vision projects "</p>
+            </div>
+            <div class="intro1">
+            <h1>& AI ENTHUSIAST</h1>
+            </div>
+        </div>
+    </section>
+    <a href="#demo">
+        <div class="box">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </a>
+
+      <section class="skills_container">
+        <div class="skills">
+            <div class="skill" id="ml">
+              <span class="title">Machine learning [Python, C++, Tensorflow]</span>
+              <div class="progress-bar">
+                <div class="progress"></div>
+              </div>
+            </div>
+            
+            <div class="skill" id="cv">
+              <span class="title">Computer Vision [OpenCV]</span>
+              <div class="progress-bar">
+                <div class="progress"></div>
+              </div>
+            </div>
+            
+            <div class="skill" id="nn">
+              <span class="title">Neural Networks [RNN, CNN, ANN]</span>
+              <div class="progress-bar">
+                <div class="progress"></div>
+              </div>
+            </div>
+
+            <div class="skill" id="wd">
+                <span class="title">Web Development [HTML, CSS, JS, Python]</span>
+                <div class="progress-bar">
+                  <div class="progress"></div>
+                </div>
+              </div>
+              <div class="skill" id="ad">
+                <span class="title">API Development [FastAPI, FlaskAPI]</span>
+                <div class="progress-bar">
+                  <div class="progress"></div>
+                </div>
+              </div>
+
+          </div>
+
+          
+      </div>
+      <div class="myskills">
+          <div class="text">
+              <span class="my">#My</span>
+              <span>SKILLS</span>
+          </div>
+      </div>
+      </section>
+
+      <footer>
+        <div class="f_section_1">
+          <div class="1_left">
+            <div class="top">
+
+            </div>
+            <div class="bot">
+              
+            </div>
+          </div>
+          <div class="1_right">
+
+          </div>
+        </div>
+        <div class="f_section_2">
+          <div class="2_left">
+
+          </div>
+          <div class="2_right">
+            
+          </div>
+        </div>
+        <div class="f_section_3">
+
+        </div>
+      </footer>
+
+    <script>
+      const menu = document.querySelector(".menu");
+      const menuItems = document.querySelectorAll(".menuItem");
+      const hamburger = document.querySelector(".hamburger");
+      const closeIcon = document.querySelector(".closeIcon");
+      const menuIcon = document.querySelector(".menuIcon");
+
+      function toggleMenu() {
+        if (menu.classList.contains("showMenu")) {
+          menu.classList.remove("showMenu");
+          closeIcon.style.display = "none";
+          menuIcon.style.display = "block";
+        } else {
+          menu.classList.add("showMenu");
+          closeIcon.style.display = "block";
+          menuIcon.style.display = "none";
+        }
+      }
+
+      hamburger.addEventListener("click", toggleMenu);
+
+      menuItems.forEach(function (menuItem) {
+        menuItem.addEventListener("click", toggleMenu);
+      });
+    </script>
+  </body>
+</html>
