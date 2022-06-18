@@ -1,0 +1,521 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=League+Gothic:wdth@96&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "League Gothic", sans-serif;
+  background-color:#212224;
+}
+
+.topnav {
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+.topnav h1 {
+  color: #d3d3d3;
+  font-weight: 400;
+  font-size: 55px;
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.5vw;
+  color: #d3d3d3;
+  text-decoration: none;
+  font-size: 8vw;
+}
+
+.menuItem:hover {
+  color: #e41c41;
+}
+
+.menuIcon {
+  background-color: none;
+  font-size: 55px;
+  color: #d3d3d3;
+}
+
+.closeIcon {
+  background-color: none;
+  font-size: 55px;
+  color: #e41c41;
+}
+
+.hamburger {
+  z-index: 100;
+  padding: 4px;
+  color: white solid 1px;
+  cursor: pointer;
+}
+
+.closeIcon {
+  display: none;
+}
+
+.menu {
+  position: absolute;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: black;
+  color: white;
+
+  padding-top: 4rem;
+}
+
+.showMenu {
+  transform: translateY(0);
+}
+
+.intro {
+  color: #d3d3d3;
+  width: 80%;
+  margin: 30px auto 0;
+}
+
+.intro .one {
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro .one .nameIntro {
+  display: block;
+}
+
+.intro .one .nameIntro h2 {
+  font-size: 5vw;
+  line-height: 100%;
+  font-weight: 400;
+  letter-spacing: -0.2vw;
+  text-transform: uppercase;
+  color: #e41c41;
+}
+
+.intro .one .nameIntro h1 {
+  font-size: 14vw;
+  line-height: 100%;
+  font-weight: 400;
+  letter-spacing: -0.3vw;
+  text-transform: uppercase;
+  color: #d3d3d3;
+}
+
+.intro .one .onePara {
+  max-width: 250px;
+  align-self: center;
+}
+
+.intro .one .onePara p {
+  font-size: 0.9vw;
+  font-weight: 200;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #d3d3d3;
+  padding-top: 2rem;
+}
+
+.intro .two {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro .two .twoPara {
+  max-width: 250px;
+  align-self: center;
+}
+
+.intro .two .twoPara p {
+  font-size: 0.9vw;
+  font-weight: 200;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #d3d3d3;
+  padding-top: 2rem;
+}
+
+.intro .two .intro1 h1 {
+  font-size: 14vw;
+  line-height: 100%;
+  font-weight: 400;
+  letter-spacing: -0.3vw;
+  text-transform: uppercase;
+  color: #d3d3d3;
+}
+
+.box {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box span {
+  width: 35px;
+  height: 35px;
+  display: block;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+
+.box span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.box span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+.skills_container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.skills_container .myskills .text {
+  color: #d3d3d3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.skills_container .myskills .text span {
+  font-family: "League Gothic", sans-serif;
+  font-size: 15vw;
+}
+.skills_container .myskills .text span.my {
+  margin-bottom: -20px;
+  font-size: 10vw;
+  color: #e41c41;
+}
+.skills {
+
+  padding: 50px;
+  margin: 20px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill {
+  width: 100%;
+  margin: 10px 0;
+  font-size: 2rem;
+}
+
+.title {
+  color: #d3d3d3;
+}
+
+.progress-bar {
+  background: #404040;
+  border-radius: 3px;
+  width: 100%;
+  height: 15px;
+  margin-top: 5px;
+  /*   overflow: hidden; */
+}
+
+#ml .progress {
+  max-width: 90%;
+  height: 100%;
+  background: #e41c41;
+  border-radius: 3px;
+  position: relative;
+  animation: 1s ease 0s 1 loadBars;
+}
+
+
+
+#cv .progress {
+  max-width: 85%;
+  height: 100%;
+  background: #e41c41;
+  position: relative;
+  animation: 1s ease 0s 1 loadBars;
+}
+
+
+
+#nn .progress {
+  max-width: 85%;
+  height: 100%;
+  background: #e41c41;
+  position: relative;
+  animation: 1s ease 0s 1 loadBars;
+}
+
+
+
+#wd .progress {
+  max-width: 80%;
+  height: 100%;
+  background: #e41c41;
+  position: relative;
+  animation: 1s ease 0s 1 loadBars;
+}
+
+#ad .progress {
+  max-width: 80%;
+  height: 100%;
+  background: #e41c41;
+  position: relative;
+  animation: 1s ease 0s 1 loadBars;
+}
+
+
+
+@keyframes loadBars {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media only screen and (min-device-width: 200px) and (max-device-width: 425px) {
+  .intro .two {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+
+  .intro .one {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .intro .two .intro1 h1 {
+    font-size: 4rem;
+  }
+  .intro .one .nameIntro h1 {
+    font-size: 4rem;
+  }
+  .intro .one .nameIntro h2 {
+    font-size: 2rem;
+  }
+  .intro .one .onePara p {
+    font-size: 1em;
+    padding-top: 0;
+  }
+  .intro .two .twoPara p {
+    font-size: 1em;
+    padding-top: 0;
+  }
+  .intro .two .twoPara {
+    align-self: flex-end;
+  }
+  .intro .one .onePara {
+    align-self: flex-start;
+  }
+  .menuItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.5vw;
+    color: #d3d3d3;
+    text-decoration: none;
+    font-size: 16vw;
+  }
+  .skill {
+    width: 80%;
+    margin: 10px auto;
+    font-size: 1.2rem;
+  }
+  .skills {
+    margin: 0;
+    background: #212224;
+    box-shadow: none;
+    backdrop-filter: none;
+    border-radius: 10px;
+    border: none;
+    padding-left: 0;
+    width: 300px;
+    align-self:flex-end ;
+  }
+  .skills_container {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}
+
+@media only screen and (min-device-width: 426px) and (max-device-width: 767px) {
+  .intro .two {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+
+  .intro .one {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .intro .two .intro1 h1 {
+    font-size: 4.5rem;
+  }
+  .intro .one .nameIntro h1 {
+    font-size: 4.5rem;
+  }
+  .intro .one .nameIntro h2 {
+    font-size: 2rem;
+  }
+  .intro .one .onePara p {
+    font-size: 1em;
+    padding-top: 0;
+  }
+  .intro .two .twoPara p {
+    font-size: 1em;
+    padding-top: 0;
+  }
+  .intro .two .twoPara {
+    align-self: flex-end;
+  }
+  .intro .one .onePara {
+    align-self: flex-start;
+  }
+  .menuItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.5vw;
+    color: #d3d3d3;
+    text-decoration: none;
+    font-size: 16vw;
+  }
+  .skill {
+    width: 80%;
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+  .skills {
+    margin: 0;
+    background: #212224;
+    box-shadow: none;
+    backdrop-filter: none;
+    border-radius: 10px;
+    border: none;
+    width: 450px;
+    padding: 0;
+  }
+  .skills_container {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}
+
+@media only screen and (min-device-width: 767px) and (max-device-width: 990px) {
+  .intro .two .intro1 h1 {
+    font-size: 6rem;
+  }
+  .intro .one .nameIntro h1 {
+    font-size: 6rem;
+  }
+  .intro .one .nameIntro h2 {
+    font-size: 3rem;
+  }
+  .intro .one .onePara p {
+    font-size: 0.6em;
+    padding-top: 0;
+  }
+  .intro .two .twoPara p {
+    font-size: 0.6em;
+    padding-top: 0;
+  }
+  .intro .two .twoPara {
+    max-width: 150px;
+  }
+  .intro .one .onePara {
+    max-width: 150px;
+  }
+  .skill {
+    width: 80%;
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+  .skills {
+    margin: 0;
+    background: #212224;
+    box-shadow: none;
+    backdrop-filter: none;
+    border-radius: 10px;
+    border: none;
+    padding-left: 0;
+    width: 450px;
+    align-self:flex-end ;
+  }
+  .skills_container {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+}
+
+@media only screen and (min-device-width: 991px) and (max-device-width: 1300px) {
+  .intro .two .intro1 h1 {
+    font-size: 8.5rem;
+  }
+  .intro .one .nameIntro h1 {
+    font-size: 8.5rem;
+  }
+  .intro .one .nameIntro h2 {
+    font-size: 3rem;
+  }
+  .intro .one .onePara p {
+    font-size: 0.6em;
+    padding-top: 0;
+  }
+  .intro .two .twoPara p {
+    font-size: 0.6em;
+    padding-top: 0;
+  }
+  .intro .two .twoPara {
+    width: 200px;
+  }
+  .intro .one .onePara {
+    width: 200px;
+  }
+}
